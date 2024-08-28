@@ -1,20 +1,12 @@
-from flask import Flask,render_template
+from flask import Flask,render_template,request
 app=Flask(__name__)
-@app.route("/about")
+@app.route("/home",methods=["POST"])
 def Test_Case1():
-  return render_template("about.html")
-
-@app.route("/contact")
-def Test_Case2():
-  return render_template("contact.html")
-
-@app.route("/home")
-def Test_Case3():
-  return render_template("home.html")
-
-@app.route("/about")
-def Test_Case4():
-  return render_template("about.html")
-
+    user_1=request.form["username"]
+    pass_1=request.form["password"]
+    if(user_1=="Rahul_12345" and pass_1=="R_12345"):
+        return "<h1><tt>Valid user ....</tt></h1>"
+    else:
+        return "<h1><tt>In_Valid user ....</tt></h1>"
 if(__name__=="__main__"):
-  app.run(debug=True)
+    app.run(debug=True)

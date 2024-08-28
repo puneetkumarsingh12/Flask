@@ -1,36 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="icon" href="{{url_for('static',filename='images/img.jpg')}} " sizes="16*16">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME_PAGE</title>
+    <link href="{{url_for('static',filename='images/j.jpg')}}" rel="icon" sizes="16*16">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/static.css')}}">
+    <script src="{{url_for('static',filename='js/demo.js')}}"></script>
 </head>
 <body>
-<fieldset style="background-color: lightgreen; height: 100vh;">
-<legend style="text-align: center; background-color: red;">HOME_PAGE</legend>
-
-<div style="border: 2px black solid; justify-content: center; margin-left: 30vw; margin-right: 30vw;height: 50vh; margin-top: 30vh; text-align: center;">
-
-<label for="n">NAME :</label> <input type="text" id="n"> <br> &nbsp; 
-<label for="p">PASSWORD :</label> <input type="password" id="p"> <br>
-<label for="D">DATE OF BIRTH :</label> <input type="date" id="D"> <br>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-</fieldset>
-
-
+    <hr>
+    <center>
+    <h1><tt>IHUB LOGIN PAGE</tt></h1> 3
+    </center>
+    <hr>
+    <br>
+    <fieldset>
+        <legend>STUDENT_LOGIN</legend>
+        <center>
+            <table border="3">
+                <form action="http://127.0.0.1:5000/home" onsubmit="return Test_Case1()" method="POST">
+                    <tr>
+                        <td><label for="">User_Name</label></td>
+                        <td><input type="text" placeholder="username"name="username"  autocomplete="off"></td>
+                        <td><span id="AAA"></span></td>
+                    </tr>
+                    <tr>
+                        <td><label for="">Password</label></td>
+                        <td><input type="pasword" placeholder="password"  name="password" autocomplete="off"></td>
+                        <td><span id="BBB"></span></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="submit" value="STUDENT_LOGIN"></td>
+                    </tr>
+                </form>
+            </table>
+        </center>
+    </fieldset>
+     
+    
 </body>
 </html>
